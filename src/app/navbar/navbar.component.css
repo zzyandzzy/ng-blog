@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+}
+
+.navbar-logo {
+  font-size: 22px;
+  color: #686d76;
+  line-height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: auto;
+  max-width: 50%;
+  height: 22px;
+  margin-top: -16px;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  width: auto;
+  height: 32px;
+  outline: 0;
+}

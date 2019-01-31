@@ -1,0 +1,8 @@
+<div class="main-content index-page clearfix">
+  <div class="post-lists">
+    <div *ngIf="articles.length > 0">
+      <app-card *ngFor="let article of articles;let i = index;" [article]="article" [index]="i">{{i + 1}}</app-card>
+    </div>
+  </div>
+  <app-list-navigator [pageNumber]="pageIndex"></app-list-navigator>
+</div>
