@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.9.0/styles/xcode.min.css">
+<article class="main-content page-page" itemscope itemtype="http://schema.org/Article">
+  <div *ngIf="errorCode != 200">
+    错误代码: {{errorCode}}
+    <br>
+    错误信息: {{post}}
+  </div>
+  <div *ngIf="errorCode === 200" class="post-header">
+    <h1 class="post-title" itemprop="name headline">
+      <a routerLink="/index">{{post.title}}</a>
+    </h1>
+    <div class="post-data">
+      <time itemprop="datePublished">发布于 {{post.created * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</time>
+      /  {{post.commentsNum}} 条评论
+      /  {{post.hits}} 次浏览
+    </div>
+  </div>
+  <div *ngIf="errorCode === 200" id="post-content" class="post-content" itemprop="articleBody">
+    <p class="post-categores" id="post-categores">
+    </p>
+    <div [innerHTML]="post.content" id="post-content-div"></div>
+    <p class="post-info">
+      本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名,转载请标明出处<br/>
+    </p>
+    <time itemprop="datePublished">最后修改于 {{post.modified * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</time>
+  </div>
+</article>
+<div *ngIf="errorCode === 200">
+  <app-comment *ngIf="post.allowComment === 1"></app-comment>
+</div>
+<div id="directory-content" class="directory-content">
+  <div id="directory">
+  </div>
+</div>
+

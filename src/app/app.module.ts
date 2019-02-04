@@ -3,18 +3,21 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AboutComponent } from './about/about.component';
-import { LinksComponent } from './links/links.component';
-import { ArchivesComponent } from './archives/archives.component';
-import { IndexComponent } from './index/index.component';
-import { BottombarComponent } from './bottombar/bottombar.component';
-import { CommentComponent } from './comment/comment.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SearchComponent } from './search/search.component';
-import { CardComponent } from './card/card.component';
-import { ArticleComponent } from './article/article.component';
-import { ListNavigatorComponent } from './list-navigator/list-navigator.component';
+import {NavbarComponent} from './navbar/navbar.component';
+import {AboutComponent} from './about/about.component';
+import {LinksComponent} from './links/links.component';
+import {ArchivesComponent} from './archives/archives.component';
+import {IndexComponent} from './index/index.component';
+import {BottombarComponent} from './bottombar/bottombar.component';
+import {CommentComponent} from './comment/comment.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {SearchComponent} from './search/search.component';
+import {CardComponent} from './card/card.component';
+import {ListNavigatorComponent} from './list-navigator/list-navigator.component';
+import {PostComponent} from './post/post.component';
+import {HttpClientModule} from '@angular/common/http';
+import { CategoreComponent } from './categore/categore.component';
+import { PostListItemComponent } from './post-list-item/post-list-item.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,15 @@ import { ListNavigatorComponent } from './list-navigator/list-navigator.componen
     PageNotFoundComponent,
     SearchComponent,
     CardComponent,
-    ArticleComponent,
-    ListNavigatorComponent
+    ListNavigatorComponent,
+    PostComponent,
+    CategoreComponent,
+    PostListItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,22 +1,23 @@
 <div class="post-lists-body">
   <div class="post-list-item">
     <div class="post-list-item-container">
-      <div class="item-thumb bg-deepgrey" [ngStyle]="{'background': 'url('+article.imageUrl+')'}"></div>
-      <a routerLink="/article/{{article.id}}">
+      <div class="item-thumb bg-deepgrey"
+           [ngStyle]="{'background': 'url(assets/static/img/rand/'+post.cover+'.jpg)'}"></div>
+      <a routerLink="/p/{{post.slug}}">
         <div class="item-desc">
-          <p>{{article.abstract}}</p>
+          <p>{{post.subContent}}</p>
         </div>
       </a>
       <div class="item-slant reverse-slant bg-deepgrey"></div>
       <div class="item-slant"></div>
       <div class="item-label">
-        <div class="item-title"><a href="#">{{article.title}}</a>
+        <div class="item-title"><a href="#">{{post.title}}</a>
         </div>
         <div class="item-meta clearfix">
           <div class="item-meta-ico"
                style="background: url(assets/static/img/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
           <div class="item-meta-cat">
-            <a routerLink="/label/{{article.label}}">{{article.label}}</a>
+
           </div>
         </div>
       </div>

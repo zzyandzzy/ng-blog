@@ -1,8 +1,11 @@
 <div class="main-content index-page clearfix">
-  <div class="post-lists">
-    <div *ngIf="articles.length > 0">
-      <app-card *ngFor="let article of articles;let i = index;" [article]="article" [index]="i">{{i + 1}}</app-card>
-    </div>
+  <div *ngIf="errorCode === 200" class="post-lists">
+    <app-card *ngFor="let post of postList;let i = index;" [post]="post" [index]="i">{{i + 1}}</app-card>
   </div>
-  <app-list-navigator [pageNumber]="pageIndex"></app-list-navigator>
+  <app-list-navigator *ngIf="errorCode === 200" [currentPage]="currentPage"></app-list-navigator>
+  <div *ngIf="errorCode != 200">
+    错误代码: {{errorCode}}
+    <br>
+    错误信息: {{postList}}
+  </div>
 </div>

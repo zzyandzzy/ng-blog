@@ -1,0 +1,5 @@
+{
+  "homeUrl": "localhost:9999/",
+  "allPostUrl": "post/api/get_all_post",
+  "slugPostUrl": "post/api/get_slug_post"
+}

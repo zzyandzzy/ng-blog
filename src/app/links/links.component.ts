@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-links',
@@ -8,10 +9,11 @@ import {Component, OnInit} from '@angular/core';
 export class LinksComponent implements OnInit {
   nowTime: number = Date.now();
 
-  constructor() {
+  constructor(private titleService: Title) {
   }
 
   ngOnInit() {
+    this.titleService.setTitle('友链');
   }
 
 }

@@ -1,9 +1,9 @@
 <div class="lists-navigator clearfix">
-  <ol class="page-navigator">
-    <li class="current"><a routerLink="/page/{{currentIndex}}">{{currentIndex}}</a></li>
+  <ol class="page-navigator" id="page-nav">
+    <!--<li class="current"><a routerLink="/page/1">1</a></li>-->
     <!--<li *ngFor="let i of Array(pageCount)"><a routerLink="/page/{{i}}">{{i}}</a></li>-->
-    <li *ngIf="pageCount > 4"><span>...</span></li>
-    <li *ngIf="pageCount > 4"><a routerLink="/page/{{pageCount}}">{{pageCount}}</a></li>
-    <li class="next"><a routerLink="/page/{{pageNumber + 1}}">→</a></li>
+    <!--<li *ngIf="pageCount > 4"><span>...</span></li>-->
+    <!--<li *ngIf="pageCount > 4"><a routerLink="/page/{{pageCount}}">{{pageCount}}</a></li>-->
+    <!--<li class="next"><a routerLink="/page/2">→</a></li>-->
   </ol>
 </div>

@@ -1003,11 +1003,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #fff
 }
 
-.post-header-thumb-container .post-tags {
+.post-header-thumb-container .post-categores {
   border-bottom: none
 }
 
-.post-header-thumb-container .post-tags a:hover {
+.post-header-thumb-container .post-categores a:hover {
   color: #5f5f5f;
   border: 1px solid #f7f7f7;
   outline-style: none;
@@ -1125,7 +1125,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   display: none
 }
 
-.post-page .post-content .post-tags {
+.post-page .post-content .post-categores {
   display: none
 }
 
@@ -1138,13 +1138,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #5f5f5f
 }
 
-.post-tags {
+.post-categores {
   margin: 0;
   padding: 5px 0 15px;
   border-bottom: 1px solid #e0e0e0
 }
 
-.post-tags a {
+.post-categores a {
   font-size: 13px;
   font-weight: 600;
   display: inline-block;
@@ -1155,53 +1155,53 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   letter-spacing: 0
 }
 
-.post-tags a:nth-child(1n) {
+.post-categores a:nth-child(1n) {
   color: #fff;
   border: 1px solid #6fa3ef;
   border-radius: 15px;
   background: #6fa3ef
 }
 
-.post-tags a:nth-child(2n) {
+.post-categores a:nth-child(2n) {
   color: #fff;
   border: 1px solid #ff9800;
   border-radius: 15px;
   background: #ff9800
 }
 
-.post-tags a:nth-child(3n) {
+.post-categores a:nth-child(3n) {
   color: #fff;
   border: 1px solid #46c47c;
   border-radius: 15px;
   background: #46c47c
 }
 
-.post-tags a:nth-child(4n) {
+.post-categores a:nth-child(4n) {
   color: #fff;
   border: 1px solid #f9bb3c;
   border-radius: 15px;
   background: #f9bb3c
 }
 
-.post-tags a:nth-child(5n) {
+.post-categores a:nth-child(5n) {
   color: #fff;
   border: 1px solid #bc99c4;
   border-radius: 15px;
   background: #bc99c4
 }
 
-.post-tags a:nth-child(6n) {
+.post-categores a:nth-child(6n) {
   color: #fff;
   border: 1px solid #e8583d;
   border-radius: 15px;
   background: #e8583d
 }
 
-.post-tags a::before {
+.post-categores a::before {
   content: '# '
 }
 
-.post-content .post-tags a:hover {
+.post-content .post-categores a:hover {
   color: #5f5f5f;
   border: 1px solid #f7f7f7;
   outline-style: none;
@@ -1446,17 +1446,17 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background-color: transparent
 }
 
-.search-page .search-tags {
+.search-page .search-categores {
   margin: 0;
   padding: 15px 0;
   text-align: center
 }
 
-.search-page .search-tags p {
+.search-page .search-categores p {
   margin: 20px 0 0
 }
 
-.search-page .search-tags a {
+.search-page .search-categores a {
   font-size: 13px;
   display: inline-block;
   margin: 10px 8px 0 0;
@@ -1469,7 +1469,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   box-shadow: 0 1px 4px rgba(0, 0, 0, .04)
 }
 
-.search-page .search-tags-hr {
+.search-page .search-categores-hr {
   display: block;
   width: 55px;
   height: 2px;
@@ -1515,7 +1515,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-align: left;
   width: 250px;
   bottom: 75px;
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 #directory li, #directory ul {
@@ -2117,11 +2117,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     padding: 90px 25px 0
   }
 
-  .search-page .search-tags {
+  .search-page .search-categores {
     padding: 0 0 15px
   }
 
-  .search-page .search-tags p {
+  .search-page .search-categores p {
     margin: 0
   }
 
@@ -2215,7 +2215,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     display: inherit
   }
 
-  .post-page .post-content .post-tags {
+  .post-page .post-content .post-categores {
     display: inherit
   }
 }

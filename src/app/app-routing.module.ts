@@ -6,7 +6,8 @@ import {LinksComponent} from './links/links.component';
 import {IndexComponent} from './index/index.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {SearchComponent} from './search/search.component';
-import {ArticleComponent} from './article/article.component';
+import {PostComponent} from './post/post.component';
+import {CategoreComponent} from './categore/categore.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'archives', component: ArchivesComponent},
   {path: 'links', component: LinksComponent},
   {path: 'search', component: SearchComponent},
-  {path: 'article/:id', component: ArticleComponent},
+  {path: 'c/:c', component: CategoreComponent},
+  {path: 'p/:slug', component: PostComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
