@@ -1,14 +1,12 @@
 <div class="main-content common-page clearfix">
   <div class="categorys-item">
     <div class="common-title">
-      分类 : {{categorie}}
+      分类 : {{category}}
     </div>
 
     <div class="post-lists">
       <div class="post-lists-body">
-        <app-post-list-item></app-post-list-item>
-        <app-post-list-item></app-post-list-item>
-        <app-post-list-item></app-post-list-item>
+        <app-post-list-item *ngFor="let cate of postList;let i = index" [post]="cate" [index]="i"></app-post-list-item>
       </div>
     </div>
   </div>

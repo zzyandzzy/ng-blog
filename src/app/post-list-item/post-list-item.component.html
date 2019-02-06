@@ -2,12 +2,12 @@
   <div class="post-list-item-container ">
     <div class="item-label ">
       <div class="item-title">
-        <a href="/c/rpi-init">玩转树莓派3B+</a>
+        <a routerLink="/p/{{post.slug}}">{{post.title}}</a>
       </div>
       <div class="item-meta clearfix">
-        <div class="item-meta-ico bg-ico-web"
+        <div class="item-meta-ico"
              style="background: url(assets/static/img/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
-        <div class="item-meta-date">发布于 2018-10-15</div>
+        <div class="item-meta-date">发布于 {{post.created * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</div>
       </div>
     </div>
   </div>

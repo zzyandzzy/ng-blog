@@ -3,6 +3,8 @@ export class CardType {
   // id
   cid: number;
 
+  created: number;
+
   // 链接
   slug: string;
 
@@ -24,9 +26,10 @@ export class CardType {
   // 封面图片url
   coverUrl: string;
 
-  constructor(cid: number, slug: string, title: string, subContent: string,
-              categories: string, ico: string, cover: number, coverUrl: string) {
+  constructor(cid: number, created: number, slug: string, title: string,
+              subContent: string, categories: string, ico: string, cover: number, coverUrl: string) {
     this.cid = cid;
+    this.created = created;
     this.slug = slug;
     this.title = title;
     this.subContent = subContent;

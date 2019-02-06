@@ -19,10 +19,17 @@ export class PostDataService {
     }, httpOptions).pipe();
   }
 
-  getSlubPost(path: string): Observable<ResultResponse> {
-    return this.http.post<ResultResponse>('http://localhost:9999/post/api/get_slug_post', {
+  getPostSlug(path: string): Observable<ResultResponse> {
+    return this.http.post<ResultResponse>('http://localhost:9999/post/api/get_post_slug', {
       slug: path
-    }, httpOptions).pipe(tap(_ => console.log(`get slub post, slug: ${path}`)));
+    }, httpOptions).pipe(tap(_ => console.log(`get post by slug, slug: ${path}`)));
+  }
+
+  getAllPostCategory(cate: string): Observable<ResultResponse> {
+    return this.http.post<ResultResponse>('http://localhost:9999/post/api/get_all_post_category', {
+      pageNum: 0,
+      category: cate
+    }, httpOptions).pipe(tap(_ => console.log(`get all post by category: ${cate}`)));
   }
 
   getPageCount(): Observable<number> {

@@ -16,8 +16,8 @@ import {CardComponent} from './card/card.component';
 import {ListNavigatorComponent} from './list-navigator/list-navigator.component';
 import {PostComponent} from './post/post.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CategoreComponent } from './categore/categore.component';
 import { PostListItemComponent } from './post-list-item/post-list-item.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +34,8 @@ import { PostListItemComponent } from './post-list-item/post-list-item.component
     CardComponent,
     ListNavigatorComponent,
     PostComponent,
-    CategoreComponent,
-    PostListItemComponent
+    PostListItemComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

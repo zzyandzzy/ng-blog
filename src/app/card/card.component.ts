@@ -25,10 +25,10 @@ export class CardComponent implements OnInit {
       this.post.subContent = this.post.subContent.substring(0, 100) + '...';
     }
     document.getElementsByClassName('item-meta-ico').item(this.index).classList.add('bg-ico-' + this.post.ico);
-    this.generateCategores();
+    this.generateCategory();
   }
 
-  generateCategores() {
+  generateCategory() {
     this.post.categories.split(',').forEach(value => {
       const a = document.createElement('a');
       a.href = '/c/' + encodeURI(value);

@@ -44,7 +44,7 @@ export class PostComponent implements OnInit, AfterViewChecked {
 
   private getPost() {
     this.slug = this.route.snapshot.paramMap.get('slug');
-    this.postDataService.getSlubPost(this.slug).subscribe(res => {
+    this.postDataService.getPostSlug(this.slug).subscribe(res => {
       this.post = res.data;
       this.errorCode = res.code;
       if (this.errorCode === 200) {
@@ -55,19 +55,19 @@ export class PostComponent implements OnInit, AfterViewChecked {
     });
   }
 
-  generateCategores() {
+  generateCategory() {
     this.post.categories.split(',').forEach(value => {
       const a = document.createElement('a');
       a.href = '/c/' + encodeURI(value);
       a.innerText = value;
-      document.getElementById('post-categores').appendChild(a);
+      document.getElementById('post-categories').appendChild(a);
     });
   }
 
   ngAfterViewChecked(): void {
     if (!this.createView && document.getElementById('post-content')) {
       this.createView = true;
-      this.generateCategores();
+      this.generateCategory();
       this.createPostDirectory(document.getElementById('post-content-div'), document.getElementById('directory'), true);
     }
   }
