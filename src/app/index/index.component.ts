@@ -19,6 +19,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle('首页 - blog');
+    document.body.style.backgroundColor = '#f7f7f7';
     this.currentPage = +this.route.snapshot.paramMap.get('id');
     if (this.currentPage === 0) {
       this.currentPage = 1;

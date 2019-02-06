@@ -23,7 +23,7 @@ export class CategoryComponent implements OnInit {
   }
 
   getAllPostCategory() {
-    this.category = this.route.snapshot.paramMap.get('c');
+    this.category = decodeURI(this.route.snapshot.paramMap.get('c'));
     this.postDataService.getAllPostCategory(this.category).subscribe(res => {
       this.postList = res.data;
       this.errorCode = res.code;

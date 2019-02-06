@@ -1,51 +1,11 @@
-<div class="main-content archive-page clearfix">
-  <div class="categorys-item">
+<div *ngIf="errorCode === 200" class="main-content archive-page clearfix">
+  <div class="categorys-item" *ngFor="let postCardList of archivesMap">
 
-    <div class="categorys-title">2018年10月</div>
+    <div class="categorys-title" *ngIf="postCardList">{{postCardList[0].created * 1000 | date: 'yyyy年MM月'}}</div>
     <div class="post-lists">
       <div class="post-lists-body">
-
-        <div class="post-list-item">
-          <div class="post-list-item-container">
-            <div class="item-label">
-              <div class="item-title">
-                <a href="/article/rpi-init">玩转树莓派3B+</a>
-              </div>
-              <div class="item-meta clearfix">
-                <div class="item-meta-date">发布于 2018-10-15</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="post-list-item">
-          <div class="post-list-item-container">
-            <div class="item-label">
-              <div class="item-title">
-                <a href="/article/web-http_load">Web压力测试工具</a>
-              </div>
-              <div class="item-meta clearfix">
-                <div class="item-meta-date">发布于 2018-10-12</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="post-list-item">
-          <div class="post-list-item-container">
-            <div class="item-label">
-              <div class="item-title">
-                <a href="/article/rpi-lred">树莓派3B+红外发射接收</a>
-              </div>
-              <div class="item-meta clearfix">
-                <div class="item-meta-date">发布于 2018-10-12</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <app-post-list-item *ngFor="let cate of postCardList;let i = index" [post]="cate"
+                            [index]="i"></app-post-list-item>
       </div>
     </div>
 

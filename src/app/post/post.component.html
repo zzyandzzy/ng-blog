@@ -17,6 +17,7 @@
   </div>
   <div *ngIf="errorCode === 200" id="post-content" class="post-content" itemprop="articleBody">
     <p class="post-categories" id="post-categories">
+      <a *ngFor="let category of categories;let i = index" routerLink="/c/{{urls[i]}}">{{category}}</a>
     </p>
     <div [innerHTML]="post.content" id="post-content-div"></div>
     <p class="post-info">

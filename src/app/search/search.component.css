@@ -1,0 +1,22 @@
+.search-page .search-tags {
+  margin: 0;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.search-page .search-tags p {
+  margin: 20px 0 0;
+}
+
+.search-page .search-tags a {
+  font-size: 13px;
+  display: inline-block;
+  margin: 10px 8px 0 0;
+  padding: 2px 15px;
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s;
+  letter-spacing: 0;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+}

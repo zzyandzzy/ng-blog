@@ -9,6 +9,8 @@ import {CardType} from '../CardType';
 export class CardComponent implements OnInit {
   @Input() post: CardType;
   @Input() index: number;
+  categories: string[];
+  urls: string[] = [];
 
   constructor() {
   }
@@ -29,11 +31,9 @@ export class CardComponent implements OnInit {
   }
 
   generateCategory() {
-    this.post.categories.split(',').forEach(value => {
-      const a = document.createElement('a');
-      a.href = '/c/' + encodeURI(value);
-      a.innerText = value;
-      document.getElementsByClassName('item-meta-cat')[this.index].appendChild(a);
+    this.categories = this.post.categories.split(',');
+    this.categories.forEach(value => {
+      this.urls.push(encodeURI(value));
     });
   }
 

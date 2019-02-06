@@ -18,6 +18,8 @@ export class PostComponent implements OnInit, AfterViewChecked {
   post: PostType;
   errorCode: number;
   createView = false;
+  categories: string[];
+  urls: string[] = [];
 
   static postChildren(childNodes, reg) {
     const result = [];
@@ -52,22 +54,20 @@ export class PostComponent implements OnInit, AfterViewChecked {
       } else {
         this.titleService.setTitle('错误 - blog');
       }
+      this.generateCategory();
     });
   }
 
   generateCategory() {
-    this.post.categories.split(',').forEach(value => {
-      const a = document.createElement('a');
-      a.href = '/c/' + encodeURI(value);
-      a.innerText = value;
-      document.getElementById('post-categories').appendChild(a);
+    this.categories = this.post.categories.split(',');
+    this.categories.forEach(value => {
+      this.urls.push(encodeURI(value));
     });
   }
 
   ngAfterViewChecked(): void {
     if (!this.createView && document.getElementById('post-content')) {
       this.createView = true;
-      this.generateCategory();
       this.createPostDirectory(document.getElementById('post-content-div'), document.getElementById('directory'), true);
     }
   }
